@@ -69,8 +69,8 @@ export default function HomePage() {
                 {/* Screen */}
                 <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden relative">
                   {/* Status Bar */}
-                  <div className="bg-gray-100 px-6 py-3 flex justify-between items-center text-xs font-medium">
-                    <span>9:41 AM</span>
+                  <div className="bg-white px-6 py-3 flex justify-between items-center text-xs font-medium border-b border-gray-100">
+                    <span className="text-gray-900">9:41 AM</span>
                     <div className="flex items-center space-x-1">
                       <div className="w-4 h-2 bg-green-500 rounded-sm"></div>
                       <div className="w-6 h-3 border border-gray-400 rounded-sm">
@@ -85,100 +85,55 @@ export default function HomePage() {
                       <span className="text-gray-800 font-bold text-sm">L1</span>
                     </div>
                     <div>
-                      <h3 className="font-bold text-white text-lg">Level One Coach</h3>
-                      <p className="text-gray-300 text-xs">Your personal health assistant</p>
+                      <h3 className="font-bold text-white text-base">Level One Coach</h3>
+                      <p className="text-gray-300 text-sm">Your personal health assistant</p>
                     </div>
                   </div>
 
                   {/* Chat Messages */}
-                  <div className="flex-1 p-4 space-y-4 bg-gray-100 pb-20">
+                  <div className="flex-1 p-6 space-y-6 bg-white pb-24">
                     {/* Coach Message */}
-                    <div className="flex items-start space-x-2">
+                    <div className="flex items-start space-x-3">
                       <div className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center flex-shrink-0">
                         <span className="text-white text-xs font-bold">L1</span>
                       </div>
-                      <div className="bg-white rounded-2xl rounded-tl-sm px-4 py-3 max-w-[85%] shadow-sm border border-gray-200">
-                        <p className="text-gray-800 text-sm">Good morning! I noticed you've been experiencing fatigue after lunch. Based on your recent logs, this might be related to your meal timing.</p>
+                      <div className="bg-gray-100 rounded-2xl rounded-tl-md px-5 py-4 max-w-[80%]">
+                        <p className="text-gray-900 text-sm leading-relaxed">Good morning! I noticed you've been experiencing fatigue after lunch. Based on your recent logs, this might be related to your meal timing.</p>
                       </div>
                     </div>
 
                     {/* User Message */}
                     <div className="flex justify-end">
-                      <div className="bg-gray-700 rounded-2xl rounded-tr-sm px-4 py-3 max-w-[85%]">
-                        <p className="text-white text-sm">Yes, I've been feeling really tired around 2 PM lately</p>
+                      <div className="bg-gray-700 rounded-2xl rounded-tr-md px-5 py-4 max-w-[80%]">
+                        <p className="text-white text-sm leading-relaxed">Yes, I've been feeling really tired around 2 PM lately</p>
                       </div>
                     </div>
 
                     {/* Coach Message with Suggestion */}
-                    <div className="flex items-start space-x-2">
+                    <div className="flex items-start space-x-3">
                       <div className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center flex-shrink-0">
                         <span className="text-white text-xs font-bold">L1</span>
                       </div>
-                      <div className="bg-white rounded-2xl rounded-tl-sm px-4 py-3 max-w-[85%] shadow-sm border border-gray-200">
-                        <p className="text-gray-800 text-sm">Try eating lunch 30 minutes earlier and include more protein. I'll track how this affects your energy levels.</p>
-                        <div className="mt-3 bg-gray-50 border border-gray-300 rounded-lg p-3">
-                          <p className="text-gray-700 text-xs font-medium">💡 Experiment Suggested</p>
-                          <p className="text-gray-600 text-xs mt-1">Lunch timing adjustment</p>
+                      <div className="bg-gray-100 rounded-2xl rounded-tl-md px-5 py-4 max-w-[80%]">
+                        <p className="text-gray-900 text-sm leading-relaxed mb-3">Try eating lunch 30 minutes earlier and include more protein. I'll track how this affects your energy levels.</p>
+                        <div className="bg-white border border-gray-200 rounded-xl p-4">
+                          <p className="text-gray-700 text-xs font-semibold mb-1">💡 Experiment Suggested</p>
+                          <p className="text-gray-600 text-xs">Lunch timing adjustment</p>
                         </div>
-                      </div>
-                    </div>
-
-                    {/* User Response */}
-                    <div className="flex justify-end">
-                      <div className="bg-gray-700 rounded-2xl rounded-tr-sm px-4 py-3 max-w-[85%]">
-                        <p className="text-white text-sm">That makes sense! I'll try that today</p>
-                      </div>
-                    </div>
-
-                    {/* Coach Message */}
-                    <div className="flex items-start space-x-2">
-                      <div className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center flex-shrink-0">
-                        <span className="text-white text-xs font-bold">L1</span>
-                      </div>
-                      <div className="bg-white rounded-2xl rounded-tl-sm px-4 py-3 max-w-[85%] shadow-sm border border-gray-200">
-                        <p className="text-gray-800 text-sm">Perfect! I'll check in with you at 3 PM to see how you're feeling. 👍</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Bottom Navigation */}
-                  <div className="absolute bottom-0 left-0 right-0 bg-white border-t border-gray-200">
-                    <div className="flex justify-around py-3">
-                      <div className="flex flex-col items-center space-y-1">
-                        <div className="w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center">
-                          <span className="text-gray-600 text-xs">🏠</span>
-                        </div>
-                        <span className="text-gray-600 text-xs">Home</span>
-                      </div>
-                      <div className="flex flex-col items-center space-y-1">
-                        <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
-                          <span className="text-gray-500 text-xs">📄</span>
-                        </div>
-                        <span className="text-gray-500 text-xs">Docs</span>
-                      </div>
-                      <div className="flex flex-col items-center space-y-1">
-                        <div className="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center">
-                          <span className="text-white text-xs">💬</span>
-                        </div>
-                        <span className="text-gray-700 text-xs font-medium">Chat</span>
-                      </div>
-                      <div className="flex flex-col items-center space-y-1">
-                        <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
-                          <span className="text-gray-500 text-xs">+</span>
-                        </div>
-                        <span className="text-gray-500 text-xs">Add</span>
                       </div>
                     </div>
                   </div>
 
                   {/* Chat Input */}
-                  <div className="absolute bottom-16 left-0 right-0 bg-white border-t border-gray-200 p-4">
+                  <div className="absolute bottom-0 left-0 right-0 bg-white border-t border-gray-100 p-4">
                     <div className="flex items-center space-x-3">
-                      <div className="flex-1 bg-gray-100 rounded-full px-4 py-2">
-                        <p className="text-gray-500 text-sm">Type a message...</p>
+                      <div className="flex-1 bg-gray-100 rounded-full px-5 py-3">
+                        <p className="text-gray-500 text-sm">Type your message...</p>
                       </div>
-                      <div className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center">
-                        <span className="text-white text-sm">→</span>
+                      <div className="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center">
+                        <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                        </svg>
                       </div>
                     </div>
                   </div>
