@@ -22,10 +22,8 @@ export default function HomePage() {
               <div className="text-white font-bold text-xl">Level One</div>
             </div>
             <div className="hidden md:flex items-center space-x-8 text-white">
-              <a href="#" className="hover:text-white/80 transition-colors">The app</a>
               <a href="#" className="hover:text-white/80 transition-colors">Manifesto</a>
-              <a href="#" className="hover:text-white/80 transition-colors">Join the waitlist</a>
-              <a href="#" className="hover:text-white/80 transition-colors">We are hiring</a>
+              <a href="#waitlist" className="hover:text-white/80 transition-colors">Join the waitlist</a>
             </div>
           </nav>
         </header>
@@ -350,7 +348,7 @@ export default function HomePage() {
       </section>
 
       {/* Early Access Form Section */}
-      <section className="bg-gray-900 py-20">
+      <section id="waitlist" className="bg-gray-900 py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-lg mx-auto">
             <div className="bg-white rounded-3xl p-8 shadow-2xl">
