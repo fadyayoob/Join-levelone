@@ -189,146 +189,69 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Health Coaching Section */}
-      <section className="bg-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="font-bold text-4xl md:text-5xl text-gray-900 mb-6">Health coaching, reimagined</h2>
-          <p className="text-gray-600 text-lg mb-8 max-w-3xl mx-auto">
-            Level One connects the dots between your conditions, symptoms and lifestyle so you can understand what's really happening in your body and take the right actions with confidence
-          </p>
-
-          {/* Four Value Proposition Pillars */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            {/* Pillar 1: Talk or text anytime */}
-            <div
-              className="h-80 bg-cover bg-center bg-no-repeat relative rounded-3xl overflow-hidden"
-              style={{
-                backgroundImage: `url('/tired-man-phone.png')`,
-              }}
-            >
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className="bg-gray-600/60 backdrop-blur-sm rounded-2xl p-4">
-                  <h3 className="font-bold text-lg mb-2 text-white">Talk or text anytime, anywhere</h3>
-                  <p className="text-xs text-white/90 leading-relaxed">
-                    Forget spending hours logging 10+ symptoms and 50+ things you did that day manually – just record a
-                    voice note or snap a picture, and L1 will add this to your daily health log
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Pillar 2: Level One discovers patterns */}
-            <div
-              className="h-80 bg-cover bg-center bg-no-repeat relative rounded-3xl overflow-hidden"
-              style={{
-                backgroundImage: `url('/happy-family-dinner.png')`,
-              }}
-            >
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className="bg-gray-600/60 backdrop-blur-sm rounded-2xl p-4">
-                  <h3 className="font-bold text-lg mb-2 text-white">Level One discovers your patterns</h3>
-                  <p className="text-xs text-white/90 leading-relaxed">
-                    Each health log or a conversation helps L1 understand you more. Get daily insights that connect how
-                    your body reacts to what you eat, how you sleep, which medications you take, and helps you spot
-                    other relevant factors affecting your conditions
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Pillar 3: Take the right actions */}
-            <div
-              className="h-80 bg-cover bg-center bg-no-repeat relative rounded-3xl overflow-hidden"
-              style={{
-                backgroundImage: `url('/woman-jogging.png')`,
-              }}
-            >
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className="bg-gray-600/60 backdrop-blur-sm rounded-2xl p-4">
-                  <h3 className="font-bold text-lg mb-2 text-white">Take the right actions today</h3>
-                  <p className="text-xs text-white/90 leading-relaxed">
-                    Unlike all other symptom logging apps, L1 proactively recommends changes to your lifestyle to suit
-                    your unique needs, because the ultimate goal is to take control of your own health
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Pillar 4: Document and share */}
-            <div
-              className="h-80 bg-cover bg-center bg-no-repeat relative rounded-3xl overflow-hidden"
-              style={{
-                backgroundImage: `url('/doctor-medical-data.png')`,
-              }}
-            >
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className="bg-gray-600/60 backdrop-blur-sm rounded-2xl p-4">
-                  <h3 className="font-bold text-lg mb-2 text-white">Document and share your entire health journey, safely</h3>
-                  <p className="text-xs text-white/90 leading-relaxed">
-                    Easily build a secure health record that you own and share it with any doctor, coach or a therapist
-                    to let them know what it's like to live in your body
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* How it works Section */}
+      {/* Features Section */}
       <section className="bg-gray-50 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="font-bold text-4xl md:text-5xl text-gray-900 mb-6">How it works</h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-            {/* Step 1 */}
-            <div className="text-center flex flex-col h-full">
-              <div className="w-16 h-16 bg-black rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <span className="text-white font-bold text-xl">1</span>
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="font-bold text-4xl md:text-5xl text-gray-900 mb-6">Discover the unique features that make Level One the ultimate health companion</h2>
+          
+          {/* Four Value Proposition Pillars */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mt-16">
+            {/* Pillar 1: Personalized Insights */}
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-6 bg-gray-900 rounded-2xl flex items-center justify-center">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
               </div>
-              <h3 className="font-bold text-xl mb-4 min-h-[3rem] flex items-center justify-center">Log everything in seconds</h3>
-              <p className="text-gray-600 leading-relaxed text-sm flex-grow">
-                Type or speak your symptoms, moods, habits, add photos of your meals, medications, upload your workouts, our AI will structure and store all of this data into a smart, actionable timeline.
+              <h3 className="font-bold text-xl mb-4 text-gray-900">Log everything in seconds</h3>
+              <p className="text-gray-600 leading-relaxed">
+                No more endless symptoms checklists – record a voice note or snap a picture, and L1 will add it to your daily health log
               </p>
             </div>
 
-            {/* Step 2 */}
-            <div className="text-center flex flex-col h-full">
-              <div className="w-16 h-16 bg-black rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <span className="text-white font-bold text-xl">2</span>
+            {/* Pillar 2: Voice Logging */}
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-6 bg-gray-900 rounded-2xl flex items-center justify-center">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                </svg>
               </div>
-              <h3 className="font-bold text-xl mb-4 min-h-[3rem] flex items-center justify-center">See patterns behind your symptoms</h3>
-              <p className="text-gray-600 leading-relaxed text-sm flex-grow">
-                AI connects the dots across all logged information, such as symptoms, sleep, stress, exercise, and daily routines. You'll see what's affecting each of your conditions.
+              <h3 className="font-bold text-xl mb-4 text-gray-900">Track Symptoms, Decode Patterns</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Spot trends in between your lifestyle, your symptoms and conditions — understand what they mean, effortlessly
               </p>
             </div>
 
-            {/* Step 3 */}
-            <div className="text-center flex flex-col h-full">
-              <div className="w-16 h-16 bg-black rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <span className="text-white font-bold text-xl">3</span>
+            {/* Pillar 3: Pattern Recognition */}
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-6 bg-gray-900 rounded-2xl flex items-center justify-center">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
               </div>
-              <h3 className="font-bold text-xl mb-4 min-h-[3rem] flex items-center justify-center">Run simple experiments</h3>
-              <p className="text-gray-600 leading-relaxed text-sm flex-grow">
-                Turn insights into action. Test small changes like adjusting your nutrition and exercise and track how your body responds.
+              <h3 className="font-bold text-xl mb-4 text-gray-900">Daily, Personalized Actions</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Know exactly what to do — day by day — to support your body and mind
               </p>
             </div>
 
-            {/* Step 4 */}
-            <div className="text-center flex flex-col h-full">
-              <div className="w-16 h-16 bg-black rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <span className="text-white font-bold text-xl">4</span>
+            {/* Pillar 4: Health Experiments */}
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-6 bg-gray-900 rounded-2xl flex items-center justify-center">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
               </div>
-              <h3 className="font-bold text-xl mb-4 min-h-[3rem] flex items-center justify-center">Build and share your health record with any healthcare professional</h3>
-              <p className="text-gray-600 leading-relaxed text-sm flex-grow">
-                Everything is organised into a living record you control. Export summaries for your doctor, or just use it yourself to guide smarter choices.
+              <h3 className="font-bold text-xl mb-4 text-gray-900">Your Health Story, In One Place</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Build and share a living record with any healthcare professional — no more repeating your story again and again
               </p>
             </div>
           </div>
         </div>
       </section>
+
+
 
       {/* Testimonials Section */}
       <section className="bg-white py-20">
@@ -468,151 +391,77 @@ export default function HomePage() {
         }} />
       </section>
 
-      {/* Pricing Section */}
-      <section className="bg-gray-50 py-20">
+      {/* Early Access Form Section */}
+      <section className="bg-gray-900 py-20">
         <div className="container mx-auto px-4">
-          <h2 className="font-bold text-4xl md:text-5xl text-gray-900 text-center mb-12">Choose your plan</h2>
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* Annual Plan */}
-            <Card className="bg-blue-50 border border-blue-200 p-8 rounded-2xl relative">
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                <span className="bg-blue-600 text-white px-4 py-1 text-sm font-semibold rounded-full">Recommended</span>
+          <div className="max-w-lg mx-auto">
+            <div className="bg-white rounded-3xl p-8 shadow-2xl">
+              <div className="text-center mb-8">
+                <h2 className="font-bold text-3xl text-gray-900 mb-2">Get Early Access</h2>
               </div>
-              <CardContent className="p-0">
-                <div className="mb-6 flex justify-between items-start">
-                  <div>
-                    <h3 className="font-bold text-2xl text-gray-900 mb-2">Annual</h3>
-                    <p className="text-sm text-gray-500">Paid annually</p>
-                  </div>
-                  <div className="text-right">
-                    <div className="font-bold text-3xl text-gray-900">$6.99<span className="text-base font-normal text-gray-500">/ month</span></div>
-                  </div>
+              
+              <form className="space-y-6">
+                {/* First Name */}
+                <div>
+                  <label className="block text-gray-700 font-medium mb-2">First Name</label>
+                  <input 
+                    type="text" 
+                    placeholder="Your First Name"
+                    className="w-full px-4 py-3 bg-gray-100 border-0 rounded-2xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-800"
+                  />
                 </div>
-                <ul className="space-y-4 mb-8">
-                  <li className="flex items-start gap-3">
-                    <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5">
-                      <span className="text-white text-xs">✓</span>
-                    </div>
-                    <span className="text-gray-700">Symptom logging</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5">
-                      <span className="text-white text-xs">✓</span>
-                    </div>
-                    <span className="text-gray-700">Daily health insights</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5">
-                      <span className="text-white text-xs">✓</span>
-                    </div>
-                    <span className="text-gray-700">Personalised experiments</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5">
-                      <span className="text-white text-xs">✓</span>
-                    </div>
-                    <span className="text-gray-700">Habit tracking and reminders</span>
-                  </li>
-                </ul>
-                <Button asChild className="w-full bg-black text-white hover:bg-gray-800 py-3">
-                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSduSnHl2SbpIJpDzvUAMNexeeeIqsurXwHVGtNg0CLRLNmkBA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
-                    Get Started
-                  </a>
-                </Button>
-              </CardContent>
-            </Card>
 
-            {/* Monthly Plan */}
-            <Card className="bg-white border border-gray-200 p-8 rounded-2xl">
-              <CardContent className="p-0">
-                <div className="mb-6 flex justify-between items-start">
-                  <div>
-                    <h3 className="font-bold text-2xl text-gray-900 mb-2">Monthly</h3>
-                    <p className="text-sm text-gray-500">Paid monthly</p>
-                  </div>
-                  <div className="text-right">
-                    <div className="font-bold text-3xl text-gray-900">$9.99<span className="text-base font-normal text-gray-500">/ month</span></div>
-                  </div>
+                {/* Email */}
+                <div>
+                  <label className="block text-gray-700 font-medium mb-2">Email</label>
+                  <input 
+                    type="email" 
+                    placeholder="Your Email"
+                    className="w-full px-4 py-3 bg-gray-100 border-0 rounded-2xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-800"
+                  />
                 </div>
-                <ul className="space-y-4 mb-8">
-                  <li className="flex items-start gap-3">
-                    <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5">
-                      <span className="text-white text-xs">✓</span>
-                    </div>
-                    <span className="text-gray-700">Symptom logging</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5">
-                      <span className="text-white text-xs">✓</span>
-                    </div>
-                    <span className="text-gray-700">Daily health insights</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5">
-                      <span className="text-white text-xs">✓</span>
-                    </div>
-                    <span className="text-gray-700">Personalised experiments</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5">
-                      <span className="text-white text-xs">✓</span>
-                    </div>
-                    <span className="text-gray-700">Habit tracking and reminders</span>
-                  </li>
-                </ul>
-                <Button asChild className="w-full bg-black text-white hover:bg-gray-800 py-3">
-                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSduSnHl2SbpIJpDzvUAMNexeeeIqsurXwHVGtNg0CLRLNmkBA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
-                    Get Started
-                  </a>
-                </Button>
-              </CardContent>
-            </Card>
 
-            {/* Lifetime Plan */}
-            <Card className="bg-green-50 border border-green-200 p-8 rounded-2xl">
-              <CardContent className="p-0">
-                <div className="mb-6 flex justify-between items-start">
-                  <div>
-                    <h3 className="font-bold text-2xl text-gray-900 mb-2">Lifetime</h3>
-                    <p className="text-sm text-gray-500">One time payment</p>
-                  </div>
-                  <div className="text-right">
-                    <div className="font-bold text-3xl text-gray-900">$179</div>
-                  </div>
+                {/* Country */}
+                <div>
+                  <label className="block text-gray-700 font-medium mb-2">Country</label>
+                  <select className="w-full px-4 py-3 bg-gray-100 border-0 rounded-2xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-800">
+                    <option value="">Select</option>
+                    <option value="US">United States</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="CA">Canada</option>
+                    <option value="AU">Australia</option>
+                    <option value="DE">Germany</option>
+                    <option value="FR">France</option>
+                    <option value="ES">Spain</option>
+                    <option value="IT">Italy</option>
+                    <option value="NL">Netherlands</option>
+                    <option value="OTHER">Other</option>
+                  </select>
                 </div>
-                <ul className="space-y-4 mb-8">
-                  <li className="flex items-start gap-3">
-                    <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5">
-                      <span className="text-white text-xs">✓</span>
-                    </div>
-                    <span className="text-gray-700">Symptom logging</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5">
-                      <span className="text-white text-xs">✓</span>
-                    </div>
-                    <span className="text-gray-700">Daily health insights</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5">
-                      <span className="text-white text-xs">✓</span>
-                    </div>
-                    <span className="text-gray-700">Personalised experiments</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5">
-                      <span className="text-white text-xs">✓</span>
-                    </div>
-                    <span className="text-gray-700">Habit tracking and reminders</span>
-                  </li>
-                </ul>
-                <Button asChild className="w-full bg-green-600 text-white hover:bg-green-700 py-3">
-                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSduSnHl2SbpIJpDzvUAMNexeeeIqsurXwHVGtNg0CLRLNmkBA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
-                    Get Started
-                  </a>
+
+                {/* iOS/Android */}
+                <div>
+                  <label className="block text-gray-700 font-medium mb-2">iOS/Android</label>
+                  <select className="w-full px-4 py-3 bg-gray-100 border-0 rounded-2xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-800">
+                    <option value="iOS">iOS</option>
+                    <option value="Android">Android</option>
+                  </select>
+                </div>
+
+                {/* Submit Button */}
+                <Button 
+                  type="submit" 
+                  className="w-full bg-gray-900 text-white hover:bg-gray-800 py-4 text-lg font-bold rounded-2xl mt-8"
+                >
+                  JOIN WAITLIST
                 </Button>
-              </CardContent>
-            </Card>
+
+                {/* Privacy Policy */}
+                <p className="text-gray-500 text-sm text-center mt-6">
+                  By subscribing, you agree to our Privacy Policy and receive updates.
+                </p>
+              </form>
+            </div>
           </div>
         </div>
       </section>
