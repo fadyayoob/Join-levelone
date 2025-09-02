@@ -36,8 +36,8 @@ export default function HomePage() {
             <p className="text-white/90 text-lg mb-2">A brand new way to get clarity and control over your health</p>
             <p className="text-white/90 text-lg mb-8">through voice logging, AI insights, and pattern recognition.</p>
             <Button asChild className="bg-black text-white hover:bg-gray-800 px-8 py-3 rounded-lg font-medium text-lg">
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSduSnHl2SbpIJpDzvUAMNexeeeIqsurXwHVGtNg0CLRLNmkBA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
-                Get Started
+              <a href="#waitlist">
+                Join the waitlist
               </a>
             </Button>
           </div>
@@ -51,8 +51,8 @@ export default function HomePage() {
             <h2 className="font-bold text-4xl md:text-5xl text-white mb-6">A personal coach in your pocket</h2>
             <div className="flex justify-center mb-12">
               <Button asChild className="bg-white text-black hover:bg-gray-100 px-8 py-3 rounded-lg font-medium text-lg">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSduSnHl2SbpIJpDzvUAMNexeeeIqsurXwHVGtNg0CLRLNmkBA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
-                  Get Started
+                <a href="#waitlist">
+                  Join the waitlist
                 </a>
               </Button>
             </div>
