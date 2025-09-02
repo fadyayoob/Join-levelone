@@ -22,7 +22,7 @@ export default function HomePage() {
             </div>
             <div className="hidden md:flex items-center space-x-8 text-white">
               <a href="#" className="hover:text-white/80 transition-colors">Manifesto</a>
-              <a href="#waitlist" className="hover:text-white/80 transition-colors">Join the waitlist</a>
+              <a href="#waitlist" className="hover:text-white/80 transition-colors">Join Waitlist</a>
             </div>
           </nav>
         </header>
@@ -37,7 +37,7 @@ export default function HomePage() {
             <p className="text-white/90 text-lg mb-8">through voice logging, AI insights, and pattern recognition.</p>
             <Button asChild className="bg-black text-white hover:bg-gray-800 px-8 py-3 rounded-lg font-medium text-lg">
               <a href="#waitlist">
-                Join the waitlist
+                Join Waitlist
               </a>
             </Button>
           </div>
@@ -52,7 +52,7 @@ export default function HomePage() {
             <div className="flex justify-center mb-12">
               <Button asChild className="bg-white text-black hover:bg-gray-100 px-8 py-3 rounded-lg font-medium text-lg">
                 <a href="#waitlist">
-                  Join the waitlist
+                  Join Waitlist
                 </a>
               </Button>
             </div>
