@@ -147,24 +147,14 @@ export default function HomePage() {
       {/* Features Section */}
       <section className="bg-gray-50 py-20">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="font-bold text-4xl md:text-5xl text-gray-900 mb-6">Discover the unique features that make Level One the ultimate health companion</h2>
+          <h2 className="font-bold text-4xl md:text-5xl text-gray-900 mb-6">Why Level One?</h2>
+          <p className="text-gray-600 text-lg mb-8 max-w-3xl mx-auto">
+            Discover the unique features that make Level One the ultimate health companion
+          </p>
           
           {/* Four Value Proposition Pillars */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mt-16">
-            {/* Pillar 1: Personalized Insights */}
-            <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-6 bg-gray-900 rounded-2xl flex items-center justify-center">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
-              </div>
-              <h3 className="font-bold text-xl mb-4 text-gray-900">Log everything in seconds</h3>
-              <p className="text-gray-600 leading-relaxed">
-                No more endless symptoms checklists – record a voice note or snap a picture, and L1 will add it to your daily health log
-              </p>
-            </div>
-
-            {/* Pillar 2: Voice Logging */}
+            {/* Pillar 1: Voice Logging (switched from position 2) */}
             <div className="text-center">
               <div className="w-16 h-16 mx-auto mb-6 bg-gray-900 rounded-2xl flex items-center justify-center">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -174,6 +164,19 @@ export default function HomePage() {
               <h3 className="font-bold text-xl mb-4 text-gray-900">Track Symptoms, Decode Patterns</h3>
               <p className="text-gray-600 leading-relaxed">
                 Spot trends in between your lifestyle, your symptoms and conditions — understand what they mean, effortlessly
+              </p>
+            </div>
+
+            {/* Pillar 2: Personalized Insights (switched from position 1) */}
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-6 bg-gray-900 rounded-2xl flex items-center justify-center">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+              </div>
+              <h3 className="font-bold text-xl mb-4 text-gray-900">Log everything in seconds</h3>
+              <p className="text-gray-600 leading-relaxed">
+                No more endless symptoms checklists – record a voice note or snap a picture, and L1 will add it to your daily health log
               </p>
             </div>
 
