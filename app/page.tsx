@@ -49,13 +49,6 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="font-bold text-4xl md:text-5xl text-white mb-6">A personal coach in your pocket</h2>
-            <div className="flex justify-center mb-12">
-              <Button asChild className="bg-white text-black hover:bg-gray-100 px-8 py-3 rounded-lg font-medium text-lg">
-                <a href="#waitlist">
-                  Join Waitlist
-                </a>
-              </Button>
-            </div>
           </div>
 
           {/* Mobile Phone Mockup */}
@@ -202,6 +195,15 @@ export default function HomePage() {
                 Build and share a living record with any healthcare professional — no more repeating your story again and again
               </p>
             </div>
+          </div>
+          
+          {/* Call to Action Below Pillars */}
+          <div className="text-center mt-16">
+            <Button asChild className="bg-gray-900 text-white hover:bg-gray-800 px-12 py-4 rounded-lg font-medium text-lg">
+              <a href="#waitlist">
+                Join Waitlist
+              </a>
+            </Button>
           </div>
         </div>
       </section>
