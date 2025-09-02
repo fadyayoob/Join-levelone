@@ -18,7 +18,7 @@ export default function HomePage() {
         <header className="relative z-10 container mx-auto px-4 py-6">
           <nav className="flex items-center justify-between">
             <div className="flex items-center">
-              <img src="/level-one-logo.png" alt="Level One" className="w-20 h-20 object-contain" />
+              <img src="/level-one-logo.png" alt="Level One" className="w-17 h-17 object-contain" />
             </div>
             <div className="hidden md:flex items-center space-x-8 text-white">
               <a href="#" className="hover:text-white/80 transition-colors">Manifesto</a>
