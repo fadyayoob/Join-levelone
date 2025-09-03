@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import WaitlistForm from "@/components/WaitlistForm"
 
 export default function HomePage() {
   return (
@@ -352,73 +353,7 @@ export default function HomePage() {
       <section id="waitlist" className="bg-gray-900 py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-lg mx-auto">
-            <div className="bg-white rounded-3xl p-8 shadow-2xl">
-              <div className="text-center mb-8">
-                <h2 className="font-bold text-3xl text-gray-900 mb-2">Get Early Access</h2>
-              </div>
-              
-              <form className="space-y-6">
-                {/* First Name */}
-                <div>
-                  <label className="block text-gray-700 font-medium mb-2">First Name</label>
-                  <input 
-                    type="text" 
-                    placeholder="Your First Name"
-                    className="w-full px-4 py-3 bg-gray-100 border-0 rounded-2xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-800"
-                  />
-                </div>
-
-                {/* Email */}
-                <div>
-                  <label className="block text-gray-700 font-medium mb-2">Email</label>
-                  <input 
-                    type="email" 
-                    placeholder="Your Email"
-                    className="w-full px-4 py-3 bg-gray-100 border-0 rounded-2xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-800"
-                  />
-                </div>
-
-                {/* Country */}
-                <div>
-                  <label className="block text-gray-700 font-medium mb-2">Country</label>
-                  <select className="w-full px-4 py-3 bg-gray-100 border-0 rounded-2xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-800">
-                    <option value="">Select</option>
-                    <option value="US">United States</option>
-                    <option value="UK">United Kingdom</option>
-                    <option value="CA">Canada</option>
-                    <option value="AU">Australia</option>
-                    <option value="DE">Germany</option>
-                    <option value="FR">France</option>
-                    <option value="ES">Spain</option>
-                    <option value="IT">Italy</option>
-                    <option value="NL">Netherlands</option>
-                    <option value="OTHER">Other</option>
-                  </select>
-                </div>
-
-                {/* iOS/Android */}
-                <div>
-                  <label className="block text-gray-700 font-medium mb-2">iOS/Android</label>
-                  <select className="w-full px-4 py-3 bg-gray-100 border-0 rounded-2xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-800">
-                    <option value="iOS">iOS</option>
-                    <option value="Android">Android</option>
-                  </select>
-                </div>
-
-                {/* Submit Button */}
-                <Button 
-                  type="submit" 
-                  className="w-full bg-gray-900 text-white hover:bg-gray-800 py-4 text-lg font-bold rounded-2xl mt-8"
-                >
-                  JOIN WAITLIST
-                </Button>
-
-                {/* Privacy Policy */}
-                <p className="text-gray-500 text-sm text-center mt-6">
-                  By subscribing, you agree to our Privacy Policy and receive updates.
-                </p>
-              </form>
-            </div>
+            <WaitlistForm />
           </div>
         </div>
       </section>
