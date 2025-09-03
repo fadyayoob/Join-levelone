@@ -22,18 +22,18 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Prepare data for Airtable - minimal required fields first
-    const airtableData = {
+    // Prepare data for Airtable - match exact field names from your table
+    const submissionData = {
       fields: {
-        'First Name': firstName,
-        'Email': email,
+        'Full Name': firstName,
+        'Email Address': email,
         'Country': country,
-        'Platform': platform
-        // Removing optional fields temporarily to test
+        'iOS/Android': platform,
+        'Submission Date': new Date().toISOString().split('T')[0]
       }
     };
 
-    console.log('Sending to Airtable:', JSON.stringify(airtableData, null, 2));
+    console.log('Sending to Airtable:', JSON.stringify(submissionData, null, 2));
 
     // Send to Airtable
     const airtableResponse = await fetch(
@@ -44,7 +44,7 @@ export async function POST(request: NextRequest) {
           'Authorization': 'Bearer patwRUrf9UyB26yTR.5b3d5c8ef465e5ceadd6c5cc2a24fafa4af99f4009f189d7c775769427ab011a',
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(airtableData)
+        body: JSON.stringify(submissionData)
       }
     );
 
@@ -67,12 +67,12 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const airtableData = await airtableResponse.json();
+    const responseData = await airtableResponse.json();
     
     return NextResponse.json({ 
       success: true, 
       message: 'Successfully joined the waitlist!',
-      id: airtableData.id 
+      id: responseData.id 
     });
 
   } catch (error) {
