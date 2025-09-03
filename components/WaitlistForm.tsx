@@ -58,6 +58,7 @@ export default function WaitlistForm() {
       } else {
         setSubmitStatus('error');
         setErrorMessage(result.error || 'Something went wrong. Please try again.');
+        console.error('Form submission error:', result);
       }
     } catch (error) {
       setSubmitStatus('error');

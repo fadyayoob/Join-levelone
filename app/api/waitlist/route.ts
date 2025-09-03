@@ -22,6 +22,19 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Prepare data for Airtable - minimal required fields first
+    const airtableData = {
+      fields: {
+        'First Name': firstName,
+        'Email': email,
+        'Country': country,
+        'Platform': platform
+        // Removing optional fields temporarily to test
+      }
+    };
+
+    console.log('Sending to Airtable:', JSON.stringify(airtableData, null, 2));
+
     // Send to Airtable
     const airtableResponse = await fetch(
       `https://api.airtable.com/v0/appSLdB5d06DnQiK5/Waitlist%20Entries`,
@@ -31,24 +44,25 @@ export async function POST(request: NextRequest) {
           'Authorization': 'Bearer patwRUrf9UyB26yTR.5b3d5c8ef465e5ceadd6c5cc2a24fafa4af99f4009f189d7c775769427ab011a',
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          fields: {
-            'First Name': firstName,
-            'Email': email,
-            'Country': country,
-            'Platform': platform,
-            'Signup Date': new Date().toISOString().split('T')[0], // Today's date
-            'Status': 'New'
-          }
-        })
+        body: JSON.stringify(airtableData)
       }
     );
 
     if (!airtableResponse.ok) {
       const errorData = await airtableResponse.text();
-      console.error('Airtable API Error:', errorData);
+      console.error('Airtable API Error Status:', airtableResponse.status);
+      console.error('Airtable API Error Response:', errorData);
+      
+      // Try to parse the error for more specific information
+      try {
+        const parsedError = JSON.parse(errorData);
+        console.error('Parsed Airtable Error:', parsedError);
+      } catch (e) {
+        console.error('Could not parse error response');
+      }
+      
       return NextResponse.json(
-        { error: 'Failed to save to database. Please try again.' },
+        { error: 'Failed to save to database. Please try again.', details: errorData },
         { status: 500 }
       );
     }
