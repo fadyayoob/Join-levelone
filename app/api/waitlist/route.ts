@@ -42,11 +42,11 @@ export async function POST(request: NextRequest) {
 
     // Send to Airtable
     const airtableResponse = await fetch(
-      `https://api.airtable.com/v0/appSLdB5d06DnQiK5/Waitlist%20Entries`,
+      `https://api.airtable.com/v0/${process.env.AIRTABLE_BASE_ID}/Waitlist%20Entries`,
       {
         method: 'POST',
         headers: {
-          'Authorization': 'Bearer patwRUrf9UyB26yTR.5b3d5c8ef465e5ceadd6c5cc2a24fafa4af99f4009f189d7c775769427ab011a',
+          'Authorization': `Bearer ${process.env.AIRTABLE_API_KEY}`,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(submissionData)
