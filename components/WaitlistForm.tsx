@@ -82,9 +82,9 @@ export default function WaitlistForm() {
             Thank you for joining our waitlist. We'll notify you as soon as Level One is available.
           </p>
         </div>
-        <Button 
+        <Button
           onClick={() => setSubmitStatus('idle')}
-          className="bg-gray-900 text-white hover:bg-gray-800 py-3 px-6 rounded-2xl"
+          className="bg-gray-900 text-white hover:bg-gray-800 py-3 px-6 rounded-2xl cursor-pointer"
         >
           Join Another Person
         </Button>
@@ -174,10 +174,10 @@ export default function WaitlistForm() {
         )}
 
         {/* Submit Button */}
-        <Button 
-          type="submit" 
+        <Button
+          type="submit"
           disabled={isSubmitting}
-          className="w-full bg-gray-900 text-white hover:bg-gray-800 py-4 text-lg font-bold rounded-2xl mt-8 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full bg-gray-900 text-white hover:bg-gray-800 py-4 text-lg font-bold rounded-2xl mt-8 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
         >
           {isSubmitting ? 'JOINING WAITLIST...' : 'JOIN WAITLIST'}
         </Button>

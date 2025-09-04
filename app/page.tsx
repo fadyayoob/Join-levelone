@@ -5,6 +5,18 @@ import { Card, CardContent } from "@/components/ui/card"
 import WaitlistForm from "@/components/WaitlistForm"
 import { useState } from 'react'
 
+// Smooth scroll function
+const scrollToWaitlist = (e: React.MouseEvent) => {
+  e.preventDefault()
+  const waitlistSection = document.getElementById('waitlist')
+  if (waitlistSection) {
+    waitlistSection.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  }
+}
+
 export default function HomePage() {
   // State for carousel
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
@@ -56,7 +68,7 @@ export default function HomePage() {
               <img src="/level-one-logo.png" alt="Level One" className="w-17 h-17 object-contain" />
             </div>
             <div className="hidden md:flex items-center space-x-8 text-white">
-              <a href="#waitlist" className="hover:text-white/80 transition-colors">Join Waitlist</a>
+              <button onClick={scrollToWaitlist} className="hover:text-white/80 transition-colors cursor-pointer">Join Waitlist</button>
             </div>
           </nav>
         </header>
@@ -69,10 +81,10 @@ export default function HomePage() {
             </h1>
             <p className="text-white/90 text-lg mb-2">A brand new way to get clarity and control over your health</p>
             <p className="text-white/90 text-lg mb-8">through voice logging, AI insights, and pattern recognition.</p>
-            <Button asChild className="bg-black text-white hover:bg-gray-800 px-8 py-3 rounded-lg font-medium text-lg">
-              <a href="#waitlist">
+            <Button asChild className="bg-black text-white hover:bg-gray-800 px-8 py-3 rounded-lg font-medium text-lg cursor-pointer">
+              <button onClick={scrollToWaitlist}>
                 Join Waitlist
-              </a>
+              </button>
             </Button>
           </div>
         </div>
@@ -250,10 +262,10 @@ export default function HomePage() {
           
           {/* Call to Action Below Pillars */}
           <div className="text-center mt-16">
-            <Button asChild className="bg-gray-900 text-white hover:bg-gray-800 px-12 py-4 rounded-lg font-medium text-lg">
-              <a href="#waitlist">
+            <Button asChild className="bg-gray-900 text-white hover:bg-gray-800 px-12 py-4 rounded-lg font-medium text-lg cursor-pointer">
+              <button onClick={scrollToWaitlist}>
                 Join Waitlist
-              </a>
+              </button>
             </Button>
           </div>
         </div>

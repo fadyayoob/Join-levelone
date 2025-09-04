@@ -20,6 +20,11 @@ export const metadata: Metadata = {
   description:
     "A brand new way to get clarity and control over your health through voice logging, AI insights, and pattern recognition.",
   generator: "v0.app",
+  icons: {
+    icon: "/level-one-logo.png",
+    shortcut: "/level-one-logo.png",
+    apple: "/level-one-logo.png",
+  },
 }
 
 export default function RootLayout({
