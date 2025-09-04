@@ -3,10 +3,10 @@ import { NextRequest, NextResponse } from 'next/server';
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { firstName, email, country, platform } = body;
+    const { fullName, email, country, platform } = body;
 
     // Validate required fields
-    if (!firstName || !email || !country || !platform) {
+    if (!fullName || !email || !country || !platform) {
       return NextResponse.json(
         { error: 'All fields are required' },
         { status: 400 }
@@ -22,15 +22,20 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Prepare data for Airtable - match exact field names from your table
+    // Prepare data for Airtable (Create records API): records array + typecast for single select
     const submissionData = {
-      fields: {
-        'Full Name': firstName,
-        'Email Address': email,
-        'Country': country,
-        'iOS/Android': platform,
-        'Submission Date': new Date().toISOString().split('T')[0]
-      }
+      records: [
+        {
+          fields: {
+            'Full Name': fullName,
+            'Email Address': email,
+            'Country': country,
+            'iOS/Android': platform,
+            'Submission Date': new Date().toISOString().split('T')[0]
+          }
+        }
+      ],
+      typecast: true
     };
 
     console.log('Sending to Airtable:', JSON.stringify(submissionData, null, 2));
@@ -72,7 +77,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ 
       success: true, 
       message: 'Successfully joined the waitlist!',
-      id: responseData.id 
+      id: Array.isArray(responseData.records) && responseData.records.length > 0 ? responseData.records[0].id : undefined 
     });
 
   } catch (error) {

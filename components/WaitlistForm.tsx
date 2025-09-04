@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 
 interface FormData {
-  firstName: string;
+  fullName: string;
   email: string;
   country: string;
   platform: string;
@@ -12,7 +12,7 @@ interface FormData {
 
 export default function WaitlistForm() {
   const [formData, setFormData] = useState<FormData>({
-    firstName: '',
+    fullName: '',
     email: '',
     country: '',
     platform: 'iOS'
@@ -50,7 +50,7 @@ export default function WaitlistForm() {
       if (response.ok) {
         setSubmitStatus('success');
         setFormData({
-          firstName: '',
+          fullName: '',
           email: '',
           country: '',
           platform: 'iOS'
@@ -99,15 +99,15 @@ export default function WaitlistForm() {
       </div>
       
       <form onSubmit={handleSubmit} className="space-y-6">
-        {/* First Name */}
+        {/* Full Name */}
         <div>
-          <label className="block text-gray-700 font-medium mb-2">First Name</label>
+          <label className="block text-gray-700 font-medium mb-2">Full Name</label>
           <input 
             type="text" 
-            name="firstName"
-            value={formData.firstName}
+            name="fullName"
+            value={formData.fullName}
             onChange={handleInputChange}
-            placeholder="Your First Name"
+            placeholder="Your Full Name"
             required
             className="w-full px-4 py-3 bg-gray-100 border-0 rounded-2xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-800"
           />

@@ -1,8 +1,42 @@
+'use client'
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import WaitlistForm from "@/components/WaitlistForm"
+import { useState } from 'react'
 
 export default function HomePage() {
+  // State for carousel
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  
+  // Screenshot data
+  const screenshots = [
+    {
+      src: "/Screenshot%202025-09-04%20at%2010.58.20.png",
+      alt: "My Health screen"
+    },
+    {
+      src: "/Screenshot%202025-09-04%20at%2011.04.28.png", 
+      alt: "Health Assistant chat"
+    },
+    {
+      src: "/Screenshot%202025-09-04%20at%2011.05.16.png",
+      alt: "Home insights"
+    }
+  ]
+
+  // Navigation functions
+  const goToPrevious = () => {
+    setCurrentImageIndex((prev) => 
+      prev === 0 ? screenshots.length - 1 : prev - 1
+    )
+  }
+
+  const goToNext = () => {
+    setCurrentImageIndex((prev) => 
+      prev === screenshots.length - 1 ? 0 : prev + 1
+    )
+  }
   return (
     <div className="min-h-screen">
       {/* Hero Section with Background Image */}
@@ -22,7 +56,6 @@ export default function HomePage() {
               <img src="/level-one-logo.png" alt="Level One" className="w-17 h-17 object-contain" />
             </div>
             <div className="hidden md:flex items-center space-x-8 text-white">
-              <a href="#" className="hover:text-white/80 transition-colors">Manifesto</a>
               <a href="#waitlist" className="hover:text-white/80 transition-colors">Join Waitlist</a>
             </div>
           </nav>
@@ -49,87 +82,104 @@ export default function HomePage() {
       <section className="bg-gray-900 py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="font-bold text-4xl md:text-5xl text-white mb-6">A personal coach in your pocket</h2>
+            <h2 className="font-bold text-4xl md:text-5xl text-white mb-4">A personal health companion that understands you</h2>
+            <p className="text-gray-300 text-lg max-w-3xl mx-auto">
+              For anyone managing ongoing symptoms, chronic conditions, or unexplained health challenges — and ready to finally see the full picture.
+            </p>
           </div>
 
-          {/* Mobile Phone Mockup */}
+          {/* Screenshots carousel */}
+          <div className="mt-6 relative max-w-md mx-auto">
+            {/* Main image display */}
           <div className="flex justify-center">
-            <div className="relative">
-              {/* Phone Frame */}
-              <div className="w-80 h-[650px] bg-gray-900 rounded-[3rem] p-2 shadow-2xl">
-                {/* Screen */}
-                <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden relative">
-                  {/* Status Bar */}
-                  <div className="bg-white px-6 py-3 flex justify-between items-center text-xs font-medium border-b border-gray-100">
-                    <span className="text-gray-900">9:41 AM</span>
-                    <div className="flex items-center space-x-1">
-                      <div className="w-4 h-2 bg-green-500 rounded-sm"></div>
-                      <div className="w-6 h-3 border border-gray-400 rounded-sm">
-                        <div className="w-full h-full bg-green-500 rounded-sm"></div>
-                      </div>
-                    </div>
+              <img 
+                src={screenshots[currentImageIndex].src} 
+                alt={screenshots[currentImageIndex].alt} 
+                className="w-[320px] md:w-[360px] rounded-3xl shadow-2xl border border-gray-200 transition-all duration-300 ease-in-out" 
+                loading="lazy" 
+              />
                   </div>
 
-                  {/* Chat Header */}
-                  <div className="bg-gray-800 px-6 py-4 flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-                      <span className="text-gray-800 font-bold text-sm">L1</span>
+            {/* Left arrow */}
+            <button
+              onClick={goToPrevious}
+              className="absolute -left-16 top-1/2 transform -translate-y-1/2 p-2 hover:bg-gray-500/20 rounded-lg transition-colors"
+              aria-label="Previous image"
+            >
+              <svg className="w-8 h-8 text-gray-400 hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            
+            {/* Right arrow */}
+            <button
+              onClick={goToNext}
+              className="absolute -right-16 top-1/2 transform -translate-y-1/2 p-2 hover:bg-gray-500/20 rounded-lg transition-colors"
+              aria-label="Next image"
+            >
+              <svg className="w-8 h-8 text-gray-400 hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+            
+            {/* Dots indicator */}
+            <div className="flex justify-center mt-6 space-x-2">
+              {screenshots.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentImageIndex(index)}
+                  className={`w-3 h-3 rounded-full transition-colors ${
+                    index === currentImageIndex 
+                      ? 'bg-gray-300' 
+                      : 'bg-gray-500 hover:bg-gray-400'
+                  }`}
+                  aria-label={`Go to image ${index + 1}`}
+                />
+              ))}
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="font-bold text-white text-base">Level One Coach</h3>
-                      <p className="text-gray-300 text-sm">Your personal health assistant</p>
+
+          {/* Use case bubbles */}
+          <div className="mt-12 flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
+            <div className="inline-flex items-center gap-2 bg-gray-700 text-gray-100 rounded-full px-5 py-3">
+              <span className="w-2.5 h-2.5 bg-green-500 rounded-full"></span>
+              <span>Chronic fatigue</span>
+                      </div>
+            <div className="inline-flex items-center gap-2 bg-gray-700 text-gray-100 rounded-full px-5 py-3">
+              <span className="w-2.5 h-2.5 bg-green-500 rounded-full"></span>
+              <span>Gut issues</span>
                     </div>
+            <div className="inline-flex items-center gap-2 bg-gray-700 text-gray-100 rounded-full px-5 py-3">
+              <span className="w-2.5 h-2.5 bg-green-500 rounded-full"></span>
+              <span>Metabolic health</span>
+                      </div>
+            <div className="inline-flex items-center gap-2 bg-gray-700 text-gray-100 rounded-full px-5 py-3">
+              <span className="w-2.5 h-2.5 bg-green-500 rounded-full"></span>
+              <span>Hormonal shifts</span>
+                      </div>
+            <div className="inline-flex items-center gap-2 bg-gray-700 text-gray-100 rounded-full px-5 py-3">
+              <span className="w-2.5 h-2.5 bg-green-500 rounded-full"></span>
+              <span>Autoimmune flare-ups</span>
+                    </div>
+            <div className="inline-flex items-center gap-2 bg-gray-700 text-gray-100 rounded-full px-5 py-3">
+              <span className="w-2.5 h-2.5 bg-green-500 rounded-full"></span>
+              <span>Migraines & pain</span>
                   </div>
-
-                  {/* Chat Messages */}
-                  <div className="flex-1 p-6 space-y-6 bg-white pb-24">
-                    {/* Coach Message */}
-                    <div className="flex items-start space-x-3">
-                      <div className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center flex-shrink-0">
-                        <span className="text-white text-xs font-bold">L1</span>
-                      </div>
-                      <div className="bg-gray-100 rounded-2xl rounded-tl-md px-5 py-4 max-w-[80%]">
-                        <p className="text-gray-900 text-sm leading-relaxed">Good morning! I noticed you've been experiencing fatigue after lunch. Based on your recent logs, this might be related to your meal timing.</p>
-                      </div>
-                    </div>
-
-                    {/* User Message */}
-                    <div className="flex justify-end">
-                      <div className="bg-gray-700 rounded-2xl rounded-tr-md px-5 py-4 max-w-[80%]">
-                        <p className="text-white text-sm leading-relaxed">Yes, I've been feeling really tired around 2 PM lately</p>
-                      </div>
-                    </div>
-
-                    {/* Coach Message with Suggestion */}
-                    <div className="flex items-start space-x-3">
-                      <div className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center flex-shrink-0">
-                        <span className="text-white text-xs font-bold">L1</span>
-                      </div>
-                      <div className="bg-gray-100 rounded-2xl rounded-tl-md px-5 py-4 max-w-[80%]">
-                        <p className="text-gray-900 text-sm leading-relaxed mb-3">Try eating lunch 30 minutes earlier and include more protein. I'll track how this affects your energy levels.</p>
-                        <div className="bg-white border border-gray-200 rounded-xl p-4">
-                          <p className="text-gray-700 text-xs font-semibold mb-1">💡 Experiment Suggested</p>
-                          <p className="text-gray-600 text-xs">Lunch timing adjustment</p>
+            <div className="inline-flex items-center gap-2 bg-gray-700 text-gray-100 rounded-full px-5 py-3">
+              <span className="w-2.5 h-2.5 bg-green-500 rounded-full"></span>
+              <span>ADHD</span>
                         </div>
+            <div className="inline-flex items-center gap-2 bg-gray-700 text-gray-100 rounded-full px-5 py-3">
+              <span className="w-2.5 h-2.5 bg-green-500 rounded-full"></span>
+              <span>Brain fog</span>
                       </div>
-                    </div>
-                  </div>
-
-                  {/* Chat Input */}
-                  <div className="absolute bottom-0 left-0 right-0 bg-white border-t border-gray-100 p-4">
-                    <div className="flex items-center space-x-3">
-                      <div className="flex-1 bg-gray-100 rounded-full px-5 py-3">
-                        <p className="text-gray-500 text-sm">Type your message...</p>
-                      </div>
-                      <div className="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center">
-                        <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div className="inline-flex items-center gap-2 bg-gray-700 text-gray-100 rounded-full px-5 py-3">
+              <span className="w-2.5 h-2.5 bg-green-500 rounded-full"></span>
+              <span>Injury recovery</span>
+                        </div>
+            <div className="inline-flex items-center gap-2 bg-gray-700 text-gray-100 rounded-full px-5 py-3">
+              <span className="w-2.5 h-2.5 bg-green-500 rounded-full"></span>
+              <span>Longevity</span>
             </div>
           </div>
         </div>
@@ -142,7 +192,7 @@ export default function HomePage() {
           <p className="text-gray-600 text-lg mb-8 max-w-3xl mx-auto">
             Discover the unique features that make Level One the ultimate health companion
           </p>
-          
+
           {/* Four Value Proposition Pillars */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mt-16">
             {/* Pillar 1: Log everything in seconds with microphone icon */}
@@ -167,7 +217,7 @@ export default function HomePage() {
               </div>
               <h3 className="font-bold text-xl mb-4 text-gray-900">Track Symptoms, Decode Patterns</h3>
               <p className="text-gray-600 leading-relaxed">
-                Spot trends in between your lifestyle, your symptoms and conditions — understand what they mean, effortlessly
+                Spot trends between your lifestyle and your symptoms — understand what they mean, effortlessly
               </p>
             </div>
 
@@ -235,7 +285,7 @@ export default function HomePage() {
                       <span className="font-semibold text-gray-900">Sarah</span>
                     </div>
                     <p className="text-gray-700 leading-relaxed">
-                      "Living with chronic fatigue, gut issues, or autoimmune flare-ups and tired of retelling your story to every doctor? Level One finally helped me see the connections between my symptoms and daily choices that no doctor had spotted before."
+                      "I used to wake up exhausted every day, even after 9 hours of sleep. Logging symptoms showed a clear link between my late-night snacking and restless nights. Once I cut that out, my mornings finally  finally felt normal again."
                     </p>
                   </div>
                 </div>
@@ -250,7 +300,7 @@ export default function HomePage() {
                       <span className="font-semibold text-gray-900">Marcus</span>
                     </div>
                     <p className="text-gray-700 leading-relaxed">
-                      "Recovering from an injury and want to know if your training is helping or holding you back? Level One tracked my recovery patterns and showed me exactly when to push and when to rest."
+                      "For years I thought my bloating was random. The app flagged a recurring pattern with dairy. I eliminated any dairy containing products, and within days my digestion calmed down."
                     </p>
                   </div>
                 </div>
@@ -265,7 +315,7 @@ export default function HomePage() {
                       <span className="font-semibold text-gray-900">Elena</span>
                     </div>
                     <p className="text-gray-700 leading-relaxed">
-                      "Dealing with ADHD, fatigue, or brain fog and need to see the patterns behind it? Level One revealed how my sleep, meals, and stress were creating my brain fog cycles."
+                      "My flare-ups seemed unpredictable until I saw how stress spikes at work always preceded them. I started stress-tracking and breathing exercises, and the flares are less frequent now.”
                     </p>
                   </div>
                 </div>
@@ -280,7 +330,7 @@ export default function HomePage() {
                       <span className="font-semibold text-gray-900">David</span>
                     </div>
                     <p className="text-gray-700 leading-relaxed">
-                      "Experimenting with supplements, sleep hacks, or routines and want clear feedback on what actually works for you? Level One showed me which of my 10 supplements were actually making a difference."
+                      "The AI showed that my migraines coincided with dehydration and skipped meals. I carry a water bottle now — migraines dropped by half."
                     </p>
                   </div>
                 </div>
@@ -302,19 +352,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Navigation Arrows */}
-            <button 
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center hover:bg-gray-50 transition-colors"
-              onclick="moveSlider(-1)"
-            >
-              <span className="text-gray-600">←</span>
-            </button>
-            <button 
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center hover:bg-gray-50 transition-colors"
-              onclick="moveSlider(1)"
-            >
-              <span className="text-gray-600">→</span>
-            </button>
+            {/* Navigation arrows removed; carousel is scrollable by drag/scroll */}
           </div>
 
           {/* See More Link */}
@@ -324,29 +362,7 @@ export default function HomePage() {
             </a>
           </div>
         </div>
-
-        {/* JavaScript for Carousel */}
-        <script dangerouslySetInnerHTML={{
-          __html: `
-            let currentSlide = 0;
-            const totalSlides = 5;
-            const slidesToShow = window.innerWidth >= 1024 ? 3 : window.innerWidth >= 768 ? 2 : 1;
-            const maxSlide = totalSlides - slidesToShow;
-
-            function moveSlider(direction) {
-              currentSlide += direction;
-              if (currentSlide > maxSlide) currentSlide = 0;
-              if (currentSlide < 0) currentSlide = maxSlide;
-              
-              const slider = document.getElementById('testimonial-slider');
-              const translateX = -(currentSlide * (100 / slidesToShow));
-              slider.style.transform = 'translateX(' + translateX + '%)';
-            }
-
-            // Auto-scroll every 5 seconds
-            setInterval(() => moveSlider(1), 5000);
-          `
-        }} />
+        {/* Removed inline script; using native horizontal scroll for simplicity */}
       </section>
 
       {/* Early Access Form Section */}
@@ -354,6 +370,38 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-lg mx-auto">
             <WaitlistForm />
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="bg-gray-100 py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+              Get in Touch
+            </h2>
+            <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
+              Have questions about Level One? Want to learn more about our health companion? 
+              We'd love to hear from you.
+            </p>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 002 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <a 
+                href="mailto:info@levelone.health" 
+                className="text-xl text-gray-900 hover:text-gray-700 transition-colors font-medium"
+              >
+                info@levelone.health
+              </a>
+              <p className="text-gray-500 text-sm mt-4">
+                We typically respond within 24 hours
+              </p>
+                    </div>
           </div>
         </div>
       </section>
@@ -370,8 +418,6 @@ export default function HomePage() {
               <a href="#" className="hover:text-white transition-colors">Terms of use</a>
               <span>|</span>
               <a href="#" className="hover:text-white transition-colors">Privacy policy</a>
-              <span>|</span>
-              <a href="#" className="hover:text-white transition-colors">Contact us</a>
             </div>
           </div>
         </div>
