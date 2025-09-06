@@ -52,40 +52,53 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section with Background Image */}
-      <section
-        className="relative min-h-screen bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url('/hero-image.jpg')`,
-        }}
-      >
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/20"></div>
+      <section className="relative min-h-[75vh] md:min-h-screen overflow-hidden">
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-no-repeat scale-105 transition-transform duration-700 hover:scale-100"
+          style={{
+            backgroundImage: `url('/hero-image.jpg')`,
+            backgroundPosition: '75% center',
+          }}
+        />
+        
+        {/* Gradient Overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
 
         {/* Header */}
-        <header className="relative z-10 container mx-auto px-4 py-6">
+        <header className="relative z-10 container mx-auto px-4 py-4 md:py-6">
           <nav className="flex items-center justify-between">
             <div className="flex items-center">
-              <img src="/level-one-logo.png" alt="Level One" className="w-17 h-17 object-contain" />
+              <img src="/level-one-logo.png" alt="Level One" className="w-12 h-12 md:w-17 md:h-17 object-contain" />
             </div>
             <div className="hidden md:flex items-center space-x-8 text-white">
               <button onClick={scrollToWaitlist} className="hover:text-white/80 transition-colors cursor-pointer">Join Waitlist</button>
+            </div>
+            {/* Mobile menu button */}
+            <div className="md:hidden">
+              <button onClick={scrollToWaitlist} className="text-white text-sm bg-white/10 px-3 py-2 rounded-lg hover:bg-white/20 transition-colors cursor-pointer">
+                Join Waitlist
+              </button>
             </div>
           </nav>
         </header>
 
         {/* Hero Content */}
-        <div className="relative z-10 container mx-auto px-4 py-32">
-          <div className="max-w-2xl">
-            <h1 className="font-bold text-5xl md:text-7xl text-white mb-6 leading-tight">
-              Take full ownership of your wellbeing
-            </h1>
-            <p className="text-white/90 text-lg mb-2">A brand new way to get clarity and control over your health</p>
-            <p className="text-white/90 text-lg mb-8">through voice logging, AI insights, and pattern recognition.</p>
-            <Button asChild className="bg-black text-white hover:bg-gray-800 px-8 py-3 rounded-lg font-medium text-lg cursor-pointer">
-              <button onClick={scrollToWaitlist}>
-                Join Waitlist
-              </button>
-            </Button>
+        <div className="relative z-10 container mx-auto px-4 py-12 md:py-32 flex items-end md:items-center min-h-[calc(75vh-80px)] md:min-h-[calc(100vh-80px)]">
+          <div className="max-w-2xl w-full">
+            <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-6 md:bg-transparent md:backdrop-blur-none md:rounded-none md:p-0">
+              <h1 className="font-bold text-2xl sm:text-3xl md:text-5xl lg:text-7xl text-white mb-3 md:mb-6 leading-tight">
+                Take full ownership of your wellbeing
+              </h1>
+              <p className="text-white/95 text-sm md:text-lg mb-2 leading-relaxed">A brand new way to get clarity and control over your health</p>
+              <p className="text-white/95 text-sm md:text-lg mb-4 md:mb-8 leading-relaxed">through voice logging, AI insights, and pattern recognition.</p>
+              <Button asChild className="bg-white text-black hover:bg-gray-100 md:bg-black md:text-white md:hover:bg-gray-800 px-6 md:px-8 py-3 md:py-4 rounded-lg font-medium text-base md:text-lg cursor-pointer w-full sm:w-auto">
+                <button onClick={scrollToWaitlist}>
+                  Join Waitlist
+                </button>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
