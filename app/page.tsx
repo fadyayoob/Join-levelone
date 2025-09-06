@@ -101,24 +101,24 @@ export default function HomePage() {
           </div>
 
           {/* Screenshots carousel */}
-          <div className="mt-6 relative max-w-md mx-auto">
+          <div className="mt-6 relative max-w-md mx-auto px-12 md:px-0">
             {/* Main image display */}
           <div className="flex justify-center">
-              <img 
-                src={screenshots[currentImageIndex].src} 
-                alt={screenshots[currentImageIndex].alt} 
-                className="w-[320px] md:w-[360px] rounded-3xl shadow-2xl border border-gray-200 transition-all duration-300 ease-in-out" 
-                loading="lazy" 
+              <img
+                src={screenshots[currentImageIndex].src}
+                alt={screenshots[currentImageIndex].alt}
+                className="w-[320px] md:w-[360px] rounded-3xl shadow-2xl border border-gray-200 transition-all duration-300 ease-in-out"
+                loading="lazy"
               />
                   </div>
 
             {/* Left arrow */}
             <button
               onClick={goToPrevious}
-              className="absolute -left-16 top-1/2 transform -translate-y-1/2 p-2 hover:bg-gray-500/20 rounded-lg transition-colors"
+              className="absolute left-0 md:-left-16 top-1/2 transform -translate-y-1/2 p-2 hover:bg-gray-500/20 rounded-lg transition-colors cursor-pointer"
               aria-label="Previous image"
             >
-              <svg className="w-8 h-8 text-gray-400 hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 md:w-8 md:h-8 text-gray-400 hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </button>
@@ -126,10 +126,10 @@ export default function HomePage() {
             {/* Right arrow */}
             <button
               onClick={goToNext}
-              className="absolute -right-16 top-1/2 transform -translate-y-1/2 p-2 hover:bg-gray-500/20 rounded-lg transition-colors"
+              className="absolute right-0 md:-right-16 top-1/2 transform -translate-y-1/2 p-2 hover:bg-gray-500/20 rounded-lg transition-colors cursor-pointer"
               aria-label="Next image"
             >
-              <svg className="w-8 h-8 text-gray-400 hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 md:w-8 md:h-8 text-gray-400 hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </button>
