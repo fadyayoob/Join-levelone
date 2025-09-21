@@ -440,9 +440,9 @@ export default function HomePage() {
               Copyright © 2025 by Level One Ltd. All rights reserved.
             </div>
             <div className="flex justify-center items-center gap-4 mt-4 text-gray-400 text-sm">
-              <a href="#" className="hover:text-white transition-colors">Terms of use</a>
+              <a href="/terms" className="hover:text-white transition-colors">Terms of use</a>
               <span>|</span>
-              <a href="#" className="hover:text-white transition-colors">Privacy policy</a>
+              <a href="/privacy" className="hover:text-white transition-colors">Privacy policy</a>
             </div>
           </div>
         </div>
