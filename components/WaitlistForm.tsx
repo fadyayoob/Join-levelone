@@ -77,7 +77,7 @@ export default function WaitlistForm() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
           </div>
-          <h2 className="font-bold text-3xl text-gray-900 mb-2">You're on the list!</h2>
+          <h2 className="font-bold text-3xl text-gray-900 mb-2 AddedToList" id="AddedToList" >You're on the list!</h2>
           <p className="text-gray-600">
             Thank you for joining our waitlist. We'll notify you as soon as Level One is available.
           </p>
