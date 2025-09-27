@@ -98,7 +98,7 @@ export default function WaitlistForm() {
         <h2 className="font-bold text-3xl text-gray-900 mb-2">Get Early Access</h2>
       </div>
       
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form onSubmit={handleSubmit} id="WaitingListForm" className="space-y-6 WaitingListForm">
         {/* Full Name */}
         <div>
           <label className="block text-gray-700 font-medium mb-2">Full Name</label>
