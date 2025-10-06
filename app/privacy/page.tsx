@@ -34,7 +34,7 @@ export default function PrivacyPolicyPage() {
 
           <div className="text-gray-700 leading-relaxed space-y-8">
             <p className="text-lg">
-              Level One Health ("we," "our," or "us") values your privacy. This Privacy Policy explains how we collect, use, and protect your personal and health-related information when you use our website, mobile app, and related services (collectively, the "Services").
+              Level One ("we," "our," or "us") values your privacy. This Privacy Policy explains how we collect, use, and protect your personal information and activity data when you use our website, mobile app, and related services (collectively, the "Services").
             </p>
 
             <section>
@@ -42,7 +42,7 @@ export default function PrivacyPolicyPage() {
               <p className="mb-4">We may collect the following types of information:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li><strong>Personal Information:</strong> name, email address, phone number, and account details when you register.</li>
-                <li><strong>Health Data:</strong> voice logs, symptoms, mood, and other self-reported health information you choose to provide.</li>
+                <li><strong>Lifestyle Observations:</strong> journal entries, tags, routines, reflections, energy or mood check-ins, and other context you choose to log.</li>
                 <li><strong>Device & Usage Data:</strong> IP address, browser type, operating system, and activity within our Services.</li>
                 <li><strong>Cookies & Tracking:</strong> we use cookies and similar technologies for analytics, personalization, and performance.</li>
               </ul>
@@ -53,7 +53,7 @@ export default function PrivacyPolicyPage() {
               <p className="mb-4">We use your data to:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Provide, personalize, and improve our Services.</li>
-                <li>Analyze patterns and generate personalized health insights.</li>
+                <li>Analyze patterns and generate personalized lifestyle insights.</li>
                 <li>Maintain security and prevent fraud.</li>
                 <li>Communicate updates, new features, and support.</li>
                 <li>Conduct research and improve our AI models (with anonymization or pseudonymization where possible).</li>
@@ -63,11 +63,11 @@ export default function PrivacyPolicyPage() {
 
             <section>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">3. Sharing of Information</h2>
-              <p className="mb-4">We do not sell your personal or health data. We may share information only in the following cases:</p>
+              <p className="mb-4">We do not sell your personal data. We may share information only in the following cases:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li><strong>With Service Providers:</strong> cloud hosting, analytics, and technical support partners.</li>
                 <li><strong>For Legal Compliance:</strong> if required by law or legal process.</li>
-                <li><strong>With Consent:</strong> if you agree to share with healthcare providers or research partners.</li>
+                <li><strong>With Consent:</strong> if you agree to share with trusted collaborators or integration partners you connect.</li>
               </ul>
             </section>
 
@@ -99,12 +99,12 @@ export default function PrivacyPolicyPage() {
               <p className="mb-4">Depending on your location, you may have the right to:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Access, update, or delete your personal data.</li>
-                <li>Request a copy of your health data (data portability).</li>
+                <li>Request a copy of your personal insight data (data portability).</li>
                 <li>Restrict or object to processing.</li>
                 <li>Withdraw consent at any time.</li>
                 <li>Opt out of marketing communications.</li>
               </ul>
-              <p className="mt-4">Requests can be made at <a href="mailto:info@levelone.health" className="text-blue-600 hover:text-blue-800 underline">info@levelone.health</a>.</p>
+              <p className="mt-4">Requests can be made at <a href="mailto:hello@levelone.app" className="text-blue-600 hover:text-blue-800 underline">hello@levelone.app</a>.</p>
             </section>
 
             <section>
@@ -131,7 +131,7 @@ export default function PrivacyPolicyPage() {
               <h2 className="text-2xl font-bold text-gray-900 mb-4">12. Contact Us</h2>
               <p className="mb-4">If you have questions, contact us at:</p>
               <div className="bg-gray-50 p-6 rounded-lg">
-                <p><a href="mailto:info@levelone.health" className="text-blue-600 hover:text-blue-800 underline font-medium">info@levelone.health</a></p>
+                <p><a href="mailto:hello@levelone.app" className="text-blue-600 hover:text-blue-800 underline font-medium">hello@levelone.app</a></p>
                 <p className="text-gray-600 mt-2">251 Little Falls Drive, Wilmington, New Castle County, Delaware, 19808</p>
               </div>
             </section>

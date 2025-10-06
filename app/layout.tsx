@@ -17,9 +17,9 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "Level One - Decode Your Daily Signals",
+  title: "Level One - Personal Insights for Your Day",
   description:
-    "Connect your notes, habits, and favorite apps to reveal the patterns behind how you sleep, move, and focus.",
+    "Connect your notes, habits, and favorite apps to reveal when you create, recharge, and focus best.",
   generator: "v0.app",
   icons: {
     icon: "/level-one-logo.png",
