@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import WaitlistForm from "@/components/WaitlistForm"
+import { Mail } from "lucide-react"
 
 // Smooth scroll function
 const scrollToWaitlist = (e: React.MouseEvent) => {
@@ -177,15 +178,13 @@ export default function HomePage() {
             
             <div className="text-center">
               <div className="w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 002 2v10a2 2 0 002 2z" />
-                </svg>
+                <Mail className="w-8 h-8 text-white" aria-hidden="true" />
               </div>
               <a 
-                href="mailto:hello@levelone.app" 
+                href="mailto:info@levelone.app" 
                 className="text-xl text-gray-900 hover:text-gray-700 transition-colors font-medium"
               >
-                hello@levelone.app
+                info@levelone.app
               </a>
               <p className="text-gray-500 text-sm mt-4">
                 We typically respond within 24 hours
