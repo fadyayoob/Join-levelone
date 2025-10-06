@@ -56,10 +56,10 @@ export default function HomePage() {
           <div className="max-w-2xl w-full">
             <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-6 md:bg-transparent md:backdrop-blur-none md:rounded-none md:p-0">
               <h1 className="font-bold text-2xl sm:text-3xl md:text-5xl lg:text-7xl text-white mb-3 md:mb-6 leading-tight">
-                Level One maps the rhythms that power your day.
+                Level One reveals the flow behind how you feel.
               </h1>
               <p className="text-white/95 text-sm md:text-lg mb-6 md:mb-10 leading-relaxed">
-                Collect your notes, habits, and app data to uncover when you create, recharge, and focus best—then design your routine with confidence.
+                Collect moments, habits, and data to uncover what fuels your focus, balance, and performance.
               </p>
               <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
                 <Button asChild className="bg-white text-black hover:bg-gray-100 px-6 md:px-8 py-3 md:py-4 rounded-lg font-medium text-base md:text-lg cursor-pointer w-full sm:w-auto">
