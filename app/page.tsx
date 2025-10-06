@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/button"
 import WaitlistForm from "@/components/WaitlistForm"
-import { Mail } from "lucide-react"
 
 // Smooth scroll function
 const scrollToWaitlist = (e: React.MouseEvent) => {
@@ -164,35 +163,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="bg-gray-100 py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-              Get in Touch
-            </h2>
-            <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
-              Have questions about Level One? Want a closer look at how we help you understand and plan your day?
-              We'd love to hear from you.
-            </p>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Mail className="w-8 h-8 text-white" aria-hidden="true" />
-              </div>
-              <a 
-                href="mailto:info@levelone.app" 
-                className="text-xl text-gray-900 hover:text-gray-700 transition-colors font-medium"
-              >
-                info@levelone.app
-              </a>
-              <p className="text-gray-500 text-sm mt-4">
-                We typically respond within 24 hours
-              </p>
-                    </div>
-          </div>
-        </div>
-      </section>
 
       {/* Footer */}
       <footer className="bg-gray-900 py-12">
