@@ -17,9 +17,9 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "Level One - Take Full Ownership of Your Wellbeing",
+  title: "Level One - Decode Your Daily Signals",
   description:
-    "A brand new way to get clarity and control over your health through voice logging, AI insights, and pattern recognition.",
+    "Connect your notes, habits, and favorite apps to reveal the patterns behind how you sleep, move, and focus.",
   generator: "v0.app",
   icons: {
     icon: "/level-one-logo.png",
