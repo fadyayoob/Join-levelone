@@ -34,7 +34,7 @@ export default function TermsOfUsePage() {
 
           <div className="text-gray-700 leading-relaxed space-y-8">
             <p className="text-lg">
-              Welcome to Level One Health ("Level One Health," "we," "our," or "us"). By using our website, mobile application, or related services (collectively, the "Services"), you agree to these Terms of Use ("Terms").
+              Welcome to Level One ("Level One," "we," "our," or "us"). By using our website, mobile application, or related services (collectively, the "Services"), you agree to these Terms of Use ("Terms").
             </p>
 
             <section>
@@ -62,11 +62,11 @@ export default function TermsOfUsePage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">4. Health Disclaimer</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">4. Lifestyle Disclaimer</h2>
               <ul className="list-disc pl-6 space-y-2">
-                <li>The Services are for logging, tracking, and informational insights only.</li>
-                <li>We do not provide medical advice, diagnosis, treatment, or prescriptions.</li>
-                <li>Always consult a healthcare professional before making decisions about your health.</li>
+                <li>The Services are for personal logging, reflection, and informational insights only.</li>
+                <li>We do not provide medical, mental health, or professional advice, diagnosis, treatment, or prescriptions.</li>
+                <li>Any decisions about your wellbeing remain your responsibility; consult a qualified professional if you need medical or therapeutic guidance.</li>
               </ul>
             </section>
 
@@ -77,7 +77,7 @@ export default function TermsOfUsePage() {
 
             <section>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">5. Intellectual Property</h2>
-              <p>All content and features are owned by or licensed to Level One Health and protected by applicable law. You may not copy or distribute without consent.</p>
+              <p>All content and features are owned by or licensed to Level One and protected by applicable law. You may not copy or distribute without consent.</p>
             </section>
 
             <section>
@@ -121,7 +121,7 @@ export default function TermsOfUsePage() {
 
             <section>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">11. Indemnification</h2>
-              <p>You agree to indemnify and hold harmless Level One Health and its affiliates against claims arising from your use of the Services or violation of these Terms.</p>
+              <p>You agree to indemnify and hold harmless Level One and its affiliates against claims arising from your use of the Services or violation of these Terms.</p>
             </section>
 
             <section>
@@ -138,7 +138,7 @@ export default function TermsOfUsePage() {
               <h2 className="text-2xl font-bold text-gray-900 mb-4">14. Contact Us</h2>
               <p className="mb-4">For questions about these Terms:</p>
               <div className="bg-gray-50 p-6 rounded-lg">
-                <p><a href="mailto:info@levelone.health" className="text-blue-600 hover:text-blue-800 underline font-medium">info@levelone.health</a></p>
+                <p><a href="mailto:hello@levelone.app" className="text-blue-600 hover:text-blue-800 underline font-medium">hello@levelone.app</a></p>
                 <p className="text-gray-600 mt-2">251 Little Falls Drive, Wilmington, New Castle County, Delaware, 19808</p>
               </div>
             </section>

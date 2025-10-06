@@ -57,10 +57,10 @@ export default function HomePage() {
           <div className="max-w-2xl w-full">
             <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-6 md:bg-transparent md:backdrop-blur-none md:rounded-none md:p-0">
               <h1 className="font-bold text-2xl sm:text-3xl md:text-5xl lg:text-7xl text-white mb-3 md:mb-6 leading-tight">
-                Level One helps you make sense of your body's signals.
+                Level One maps the rhythms that power your day.
               </h1>
               <p className="text-white/95 text-sm md:text-lg mb-6 md:mb-10 leading-relaxed">
-                Connect your daily notes, habits, and data from your favorite apps to see clear patterns in how you sleep, move, and focus so you always know what helps you feel your best.
+                Collect your notes, habits, and app data to uncover when you create, recharge, and focus best—then design your routine with confidence.
               </p>
               <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
                 <Button asChild className="bg-white text-black hover:bg-gray-100 px-6 md:px-8 py-3 md:py-4 rounded-lg font-medium text-base md:text-lg cursor-pointer w-full sm:w-auto">
@@ -82,62 +82,62 @@ export default function HomePage() {
       {/* Features Section */}
       <section id="features" className="bg-gray-50 py-20">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="font-bold text-4xl md:text-5xl text-gray-900 mb-6">Why Level One?</h2>
+          <h2 className="font-bold text-4xl md:text-5xl text-gray-900 mb-6">Designed for daily insight</h2>
           <p className="text-gray-600 text-lg mb-8 max-w-3xl mx-auto">
-            Discover the unique features that help you translate everyday signals into confident action.
+            Explore the tools that turn everyday moments into personal context you can actually use.
           </p>
 
           {/* Four Value Proposition Pillars */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mt-16">
-            {/* Pillar 1: Log everything in seconds with microphone icon */}
+            {/* Pillar 1 */}
             <div className="text-center">
               <div className="w-16 h-16 mx-auto mb-6 bg-gray-900 rounded-2xl flex items-center justify-center">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
                 </svg>
               </div>
-              <h3 className="font-bold text-xl mb-4 text-gray-900">Capture every signal</h3>
+              <h3 className="font-bold text-xl mb-4 text-gray-900">Capture your day</h3>
               <p className="text-gray-600 leading-relaxed">
-                Drop in a note, voice memo, or screenshot. Level One keeps the context of your day in one living timeline.
+                Drop in a note, voice memo, or screenshot. Level One keeps a living timeline of your routines and stand-out moments.
               </p>
             </div>
 
-            {/* Pillar 2: Track Symptoms with lightbulb icon */}
+            {/* Pillar 2 */}
             <div className="text-center">
               <div className="w-16 h-16 mx-auto mb-6 bg-gray-900 rounded-2xl flex items-center justify-center">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                 </svg>
               </div>
-              <h3 className="font-bold text-xl mb-4 text-gray-900">Spot the patterns</h3>
+              <h3 className="font-bold text-xl mb-4 text-gray-900">Visualize your rhythms</h3>
               <p className="text-gray-600 leading-relaxed">
-                See how habits, inputs, and outcomes connect with rich visuals instead of endless spreadsheets.
+                See how habits, environments, and wins connect with intuitive visuals instead of endless spreadsheets.
               </p>
             </div>
 
-            {/* Pillar 3: Pattern Recognition */}
+            {/* Pillar 3 */}
             <div className="text-center">
               <div className="w-16 h-16 mx-auto mb-6 bg-gray-900 rounded-2xl flex items-center justify-center">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                 </svg>
               </div>
-              <h3 className="font-bold text-xl mb-4 text-gray-900">Get actionable nudges</h3>
+              <h3 className="font-bold text-xl mb-4 text-gray-900">Stay in sync</h3>
               <p className="text-gray-600 leading-relaxed">
-                Receive gentle prompts tuned to your goals, energy, and intentions so you can stay in flow.
+                Receive gentle prompts matched to your intentions so you can align deep work, downtime, and daily rituals.
               </p>
             </div>
 
-            {/* Pillar 4: Health Experiments */}
+            {/* Pillar 4 */}
             <div className="text-center">
               <div className="w-16 h-16 mx-auto mb-6 bg-gray-900 rounded-2xl flex items-center justify-center">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
               </div>
-              <h3 className="font-bold text-xl mb-4 text-gray-900">Share what matters</h3>
+              <h3 className="font-bold text-xl mb-4 text-gray-900">Share the highlights</h3>
               <p className="text-gray-600 leading-relaxed">
-                Bring a crystal-clear picture to teammates, coaches, or collaborators without digging through scattered notes.
+                Create a crisp snapshot for collaborators, coaches, or friends without digging through scattered notes.
               </p>
             </div>
           </div>
@@ -172,7 +172,7 @@ export default function HomePage() {
               Get in Touch
             </h2>
             <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
-              Have questions about Level One? Want a closer look at how we surface your signals?
+              Have questions about Level One? Want a closer look at how we help you understand and plan your day?
               We'd love to hear from you.
             </p>
             
